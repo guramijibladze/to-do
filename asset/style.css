@@ -1,0 +1,22 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container-fluid{
+    position: relative;
+    width: 100%;
+}
+
+
+.container-chaild{
+    position: absolute;
+    width: 60%;
+    height: 600px;
+    background-color: rgb(224, 224, 235);
+    margin-left: 20%;
+    margin-top: 7%;
+    border: 2px solid rgb(246, 243, 243);
+    border-radius: 5px;
+}
