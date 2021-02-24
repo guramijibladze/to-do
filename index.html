@@ -21,15 +21,34 @@
             <div class="title mt-5 ">
                 <h3>To Do list</h3>
             </div>
-            <div class="add-input">
-                <div class="input-group mb-3 p-5">
-                    <input type="text" class="form-control" placeholder="add your list.." 
+            <div class="add-input p-5">
+                <div class="input-group ">
+                    <input id="input" value="" type="text" class="form-control" placeholder="add your list.." 
                     aria-label="Recipient's username" aria-describedby="basic-addon2">
                     <div class="input-group-append">
-                        <input class="btn btn-outline-primary" type="submit" value="Submit">
+                        <input id="button" class="btn btn-outline-primary" type="submit" value="Submit">
                     </div>
                 </div>
             </div>
+            <div id = "divParent" class="list-input pl-5 pr-5">
+                <!-- <div class="d-flex justify-content-between">
+                    <div class="value p-2">
+                        <span id>some text</span>
+                    </div>
+                    <div class="fun row">
+                        <div class="p-2">
+                            <i class="far fa-check-circle"></i>
+                        </div>
+                        <div class="p-2">
+                            <i class="far fa-edit"></i>
+                        </div>
+                        <div class="p-2">
+                            <i class="far fa-trash-alt"></i>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            
         </div>
     </div>
 
@@ -42,7 +61,7 @@
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-
+    <script src="index.js"></script>
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
