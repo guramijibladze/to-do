@@ -20,25 +20,23 @@ document.getElementById('button').addEventListener('click', function(){
         let div = document.createElement('div');
         
         if( i == 0 ){
-            div.classList.add('save', 'p-2');
             div.insertAdjacentHTML("afterbegin",'<i class="far fa-check-circle"></i>');
+            div.classList.add('save', 'p-2');
         }else if( i == 1 ){
-            div.classList.add('edit', 'p-2');
             div.insertAdjacentHTML ("afterbegin",'<i class="far fa-edit"></i>');
+            div.classList.add('edit', 'p-2');
         }else{
-            div.classList.add('delete', 'p-2');
             div.insertAdjacentHTML ("afterbegin",'<i class="far fa-trash-alt"></i>');
+            div.classList.add('delete', 'p-2');
         }
         fun.appendChild(div);
     }
 
     text.value = "";
+
+    const x = document.querySelector('.save');
+        x.addEventListener('click', function(){
+        console.log('gurami')
+    })
 });
 
-// document.getElementsByClassName('.save').addEventListener('click', function(){
-//     console.log('gurmai');
-// })
-const save = document.getElementsByClassName('.save');
-save.addEventListener('click', function(){
-    console.log('gurami')
-})
