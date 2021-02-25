@@ -39,17 +39,12 @@ document.getElementById('button').addEventListener('click', function(){
 
     text.value = "";
 
-    listEddit();
-
-    // let red = document.getElementById(child).childNodes;
-    // let bla = document.getElementById(child).childNodes;
-    // console.log(bla);
-    
+    listEddit(child);
 
     
 }); 
 
-function listEddit(el){
+function listEddit(child){
     // document.querySelector('.save').addEventListener('click', function(){
     //     console.log('gurami')
     // });
@@ -57,18 +52,9 @@ function listEddit(el){
     // document.querySelector('.edit').addEventListener('click', function(){
     //     console.log('gurami')
     // });
-
     document.getElementById(child).addEventListener('click', function(){
-        document.querySelector(".fun").parentElement.remove();
+        document.getElementById('child' + child).remove();
    });
 }
 
-
-// function mouseOver() {
-//     document.getElementById("demo").style.color = "red";
-//   }
-  
-// function mouseOut() {
-//     document.getElementById("demo").style.color = "black";
-// }
 
