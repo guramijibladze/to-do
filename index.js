@@ -16,6 +16,7 @@ document.getElementById('button').addEventListener('click', function(){
     const fun = document.createElement('div');
     const span = document.createElement('span');
     const input = document.createElement('input');
+
     input.classList.add("form-control");
     input.hidden = true;
     input.id = child + 'input';
@@ -28,6 +29,7 @@ document.getElementById('button').addEventListener('click', function(){
     // input.style.visibility = "hidden";
     
     divChaild.appendChild(fun);
+    
     value.classList.add("value", "p-2");
     fun.classList.add("fun", "row");
     
@@ -49,9 +51,9 @@ document.getElementById('button').addEventListener('click', function(){
         }
         fun.appendChild(div);
     }
-    
+
     text.value = "";
-    removeList(child);
+    removeList(child, hr);
     editList(child, input, span);
 }); 
 
@@ -78,8 +80,9 @@ function saveList( child, span, input ){
         }
 }
 
-function removeList(child){
+function removeList(child, hr){
     document.getElementById(child).addEventListener('click', function(){
         document.getElementById('child' + child).remove();
+        console.log(hr);
    });
 }
