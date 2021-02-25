@@ -1,9 +1,13 @@
 const text = document.getElementById('input');
+let child = 0;
 
 document.getElementById('button').addEventListener('click', function(){
+    child++;
+
     const divChaild = document.createElement('div');
     document.getElementById('divParent').appendChild(divChaild);
     divChaild.classList.add("d-flex", "justify-content-between");
+    divChaild.id = "child" + child;
 
     const value = document.createElement('div');
     const fun = document.createElement('div');
@@ -17,7 +21,7 @@ document.getElementById('button').addEventListener('click', function(){
     fun.classList.add("fun", "row");
     
     for(let i = 0; i < 3; i++){
-        let div = document.createElement('div');
+        var div = document.createElement('div');
         
         if( i == 0 ){
             div.insertAdjacentHTML("afterbegin",'<i class="far fa-check-circle"></i>');
@@ -31,12 +35,40 @@ document.getElementById('button').addEventListener('click', function(){
         }
         fun.appendChild(div);
     }
+    div.id = child;
 
     text.value = "";
 
-    const x = document.querySelector('.save');
-        x.addEventListener('click', function(){
-        console.log('gurami')
-    })
-});
+    listEddit();
+
+    // let red = document.getElementById(child).childNodes;
+    // let bla = document.getElementById(child).childNodes;
+    // console.log(bla);
+    
+
+    
+}); 
+
+function listEddit(el){
+    // document.querySelector('.save').addEventListener('click', function(){
+    //     console.log('gurami')
+    // });
+
+    // document.querySelector('.edit').addEventListener('click', function(){
+    //     console.log('gurami')
+    // });
+
+    document.getElementById(child).addEventListener('click', function(){
+        document.querySelector(".fun").parentElement.remove();
+   });
+}
+
+
+// function mouseOver() {
+//     document.getElementById("demo").style.color = "red";
+//   }
+  
+// function mouseOut() {
+//     document.getElementById("demo").style.color = "black";
+// }
 

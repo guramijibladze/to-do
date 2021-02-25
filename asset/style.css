@@ -20,3 +20,31 @@
     border: 2px solid rgb(246, 243, 243);
     border-radius: 5px;
 }
+
+
+.fa-trash-alt{
+    color: rgb(231, 14, 14);
+}
+
+.fa-trash-alt:hover{
+    margin: 0 auto;
+    transform: scale(1.5);
+}
+
+.fa-check-circle{
+    color: rgb(85, 194, 51);
+}
+
+.fa-check-circle:hover{
+    margin: 0 auto;
+    transform: scale(1.5);
+}
+
+.fa-edit{
+    color: rgb(29, 146, 192);
+}
+
+.fa-edit:hover{
+    margin: 0 auto;
+    transform: scale(1.5);
+}
