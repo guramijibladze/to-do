@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-span{
+span, input{
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
@@ -54,3 +54,7 @@ span{
     margin: 0 auto;
     transform: scale(1.5);
 }
+
+/* #divParent input{
+    width: 100px!important;
+} */

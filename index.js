@@ -1,6 +1,9 @@
 const text = document.getElementById('input');
 let child = 0;
 
+isHidden = HTMLElement.hidden;
+HTMLElement.hidden = true | false;
+
 document.getElementById('button').addEventListener('click', function(){
     child++;
 
@@ -13,16 +16,16 @@ document.getElementById('button').addEventListener('click', function(){
     const fun = document.createElement('div');
     const span = document.createElement('span');
     const input = document.createElement('input');
+    input.classList.add("form-control");
+    input.hidden = true;
     input.id = child + 'input';
     // input.classList.add('form-control');
 
-    // const 
     divChaild.appendChild(value);
     value.appendChild(span);
     span.innerHTML = text.value;
-    // console.log(span.innerHTML)
     value.appendChild(input);
-    input.style.visibility = "hidden";
+    // input.style.visibility = "hidden";
     
     divChaild.appendChild(fun);
     value.classList.add("value", "p-2");
@@ -48,11 +51,8 @@ document.getElementById('button').addEventListener('click', function(){
     }
     
     text.value = "";
-
     removeList(child);
     editList(child, input, span);
-    
-    
 }); 
 
 
@@ -60,14 +60,12 @@ function editList(child, input, span){
     document.getElementById(child + 'edit').onclick= function() {myFunction()};
         function myFunction(){
             // .innerText = text.value;
-            input.style.visibility = "visible";
-            span.style.visibility = "hidden";
+            input.hidden = false;
+            span.hidden = true;
             document.getElementById(child + 'input').value = span.innerHTML;
-            // console.log(span.innerHTML);
+            saveList( child, span, input );
         }
-
-        saveList( child, span, input );
-      
+   
 }
 
 function saveList( child, span, input ){
@@ -75,8 +73,8 @@ function saveList( child, span, input ){
         function myFunction(){
             let editText = document.getElementById(child + 'input').value;
             span.innerHTML = editText;
-            span.style.visibility = "visible";
-            input.style.visibility = "hidden";
+            span.hidden = false;
+            input.hidden = true;
         }
 }
 
