@@ -53,7 +53,7 @@ document.getElementById('button').addEventListener('click', function(){
     }
 
     text.value = "";
-    removeList(child, hr);
+    removeList(child);
     editList(child, input, span);
 }); 
 
@@ -80,9 +80,9 @@ function saveList( child, span, input ){
         }
 }
 
-function removeList(child, hr){
+function removeList(child){
     document.getElementById(child).addEventListener('click', function(){
         document.getElementById('child' + child).remove();
-        console.log(hr);
+        // console.log(hr);
    });
 }
