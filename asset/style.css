@@ -55,6 +55,35 @@ span, input{
     transform: scale(1.5);
 }
 
-/* #divParent input{
-    width: 100px!important;
-} */
+@media (max-width: 550px) {
+    .d-flex{
+        display: flex;
+        flex-direction: column;
+        /* margin: auto;
+        width: 60%; */
+    }
+    span{
+        margin-left: -10%;
+    }
+    .save{
+        margin-left: 35%;
+    }
+
+    .input-group{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #input{
+        width: 100%;
+        border: 2px solid rgb(212, 206, 206);
+        border-radius: 5px;
+    }
+
+    #button{
+        margin-top: 0.5em!important;
+        border-radius: 5px;
+        margin: auto;
+        width: 50%;
+    }
+}
